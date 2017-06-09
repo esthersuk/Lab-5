@@ -12,11 +12,7 @@ function sum(a,b){ //eslint-disable-line
   var sum = a + b;
   var message = 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.';
   // return [sum,message];
-  var check = new Array();
-  check.push(sum);
-  check.push(message);
-  console.log(check);
-  return check;
+  return [sum, message];
 }
 
 // TODO: Here is the test for sum(); uncomment it to run it
@@ -32,11 +28,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // TODO: Write your code here
 function multiply(a,b){ //eslint-disable-line
-
+  var product = a * b;
+  var message = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
+  console.log(message);
+  return [product, message];
 }
 
 // TODO: Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
