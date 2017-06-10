@@ -11,8 +11,7 @@ For TODO item, be sure to change it to say DONE when you have successfully compl
 function sum(a,b){ //eslint-disable-line
   var sum = a + b;
   var message = 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.';
-  // return [sum,message];
-  return [sum, message];
+  return [sum,message];
 }
 
 // TODO: Here is the test for sum(); uncomment it to run it
@@ -30,8 +29,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a,b){ //eslint-disable-line
   var product = a * b;
   var message = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
-  console.log(message);
-  return [product, message];
+  return[product,message];
 }
 
 // TODO: Here is the test for multiply(); uncomment it to run it
@@ -49,11 +47,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // TODO: Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+  var sumTotal = sum(a, sum(b,c)[0])[0];
+  var multiplyTotal = multiply(a, multiply(b,c)[0])[0];
+  var sumTotalMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + sumTotal + '.';
+  var multiplyTotalMessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyTotal + '.';
+  return [sumTotal, multiplyTotal, sumTotalMessage, multiplyTotalMessage];
 }
 
 // TODO: Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
